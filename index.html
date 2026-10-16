@@ -1,9 +1,10 @@
+
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="درگاه فارسی دلگشا | معرفی حوزه‌ها و خدمات وزارت صنعت، معدن و تجارت">
+  <meta name="description" content="درگاه فارسی دلگشا | معرفی حوزه‌ها و خدمات صنعت، معدن و تجارت">
   <title>دلگشا | درگاه اطلاع‌رسانی</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,11 @@
   <div class="topline">
     <div class="container top-inner">
       <span>درگاه اطلاع‌رسانی دلگشا | صنعت، معدن و تجارت</span>
-      <div class="top-links"><a href="#news">اخبار و اطلاعیه‌ها</a><a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">وب‌سایت رسمی وزارت صمت ↗</a><span id="today"></span></div>
+      <div class="top-links">
+        <a href="#news">اخبار و اطلاعیه‌ها</a>
+        <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">وب‌سایت رسمی وزارت صمت ↗</a>
+        <span id="today"></span>
+      </div>
     </div>
   </div>
 
@@ -33,6 +38,7 @@
         <a href="#about">درباره ما</a>
         <a href="#contact">تماس با ما</a>
         <a class="nav-cta" href="#services">دسترسی سریع</a>
+        <a class="nav-login" href="register.html">ثبت‌نام / ورود</a>
       </nav>
     </div>
   </header>
@@ -49,151 +55,57 @@
           <a class="btn btn-glass" href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">وب‌سایت رسمی وزارت صمت ↗</a>
         </div>
         <div class="hero-note"><span class="note-dot"></span> برای مشاهده آخرین خبرها، اطلاعیه‌ها و خدمات رسمی، از درگاه وزارت صمت بازدید کنید.</div>
-     
-<style>
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  margin: 30px auto;
-  direction: rtl;
-}
+      </div>
+      <div class="hero-stats container">
+        <div><strong>خدمات</strong><span>راهنما و دسترسی سریع</span></div>
+        <div><strong>اطلاع‌رسانی</strong><span>خبرها و اطلاعیه‌های تازه</span></div>
+        <div><strong>پاسخ‌گویی</strong><span>راه‌های ارتباط با مجموعه</span></div>
+      </div>
+    </section>
 
-.hero-dropdown {
-  position: relative;
-}
-
-.hero-dropdown button {
-  width: 100%;
-  padding: 20px 8px;
-  border: 1px solid #c6a76a;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #153653, #09243c);
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.hero-dropdown button:hover {
-  background: #c6a76a;
-  color: #102b43;
-}
-
-.hero-dropdown .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  width: 100%;
-  min-width: 150px;
-  background: white;
-  border: 1px solid #e5d5b2;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px #0002;
-  overflow: hidden;
-  z-index: 9999;
-}
-
-.hero-dropdown.open .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu a {
-  display: block;
-  padding: 12px;
-  color: #153653;
-  text-decoration: none;
-  font-size: 13px;
-  border-bottom: 1px solid #eee;
-}
-
-.dropdown-menu a:hover {
-  background: #f5efe2;
-  color: #987638;
-}
-
-@media (max-width: 600px) {
-  .hero-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-</style>
-
-<div class="hero-stats container">
-
-  <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">معدن ⌄</button>
-    <div class="dropdown-menu">
-      <a href="#mining-services">خدمات معدنی</a>
-      <a href="#mining-guides">راهنمای معدن</a>
-      <a href="#mining-news">اخبار و اطلاعیه‌ها</a>
-    </div>
-  </div>
-
-  <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">صنعت ⌄</button>
-    <div class="dropdown-menu">
-      <a href="#industrial-services">خدمات صنعتی</a>
-      <a href="#industrial-guides">راهنمای صنعت</a>
-      <a href="#industrial-news">اخبار و اطلاعیه‌ها</a>
-    </div>
-  </div>
-
-  <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">تجارت ⌄</button>
-    <div class="dropdown-menu">
-      <a href="#trade-services">خدمات تجاری</a>
-      <a href="#trade-guides">راهنمای تجارت</a>
-      <a href="#contact">ارتباط با مجموعه</a>
-    </div>
-  </div>
-
-  <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">متفرقه ⌄</button>
-    <div class="dropdown-menu">
-      <a href="#announcements">اطلاعیه‌ها</a>
-      <a href="#downloads">دانلود فایل‌ها</a>
-      <a href="#faq">سؤالات متداول</a>
-    </div>
-  </div>
-
-</div>
-
-<script>
-(function () {
-  const sections = document.querySelectorAll(
-    '.hero-stats .hero-dropdown'
-  );
-
-  sections.forEach(function (section) {
-    const button = section.querySelector('button');
-
-    button.addEventListener('click', function (event) {
-      event.stopPropagation();
-
-      sections.forEach(function (other) {
-        if (other !== section) {
-          other.classList.remove('open');
-          other.querySelector('button')
-            .setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      const isOpen = section.classList.toggle('open');
-      button.setAttribute('aria-expanded', String(isOpen));
-    });
-  });
-
-  document.addEventListener('click', function () {
-    sections.forEach(function (section) {
-      section.classList.remove('open');
-      section.querySelector('button')
-        .setAttribute('aria-expanded', 'false');
-    });
-  });
-})();
-</script>
+    <section class="pathways-section" aria-label="دسته‌بندی اصلی">
+      <div class="container">
+        <div class="pathways-heading">
+          <span class="section-kicker">دسترسی موضوعی</span>
+          <h2>حوزه‌های صنعت، معدن، تجارت و سایر موضوعات</h2>
+          <p>برای مشاهده زیرموضوع‌ها، هر دسته را انتخاب کنید. پیوندهای رسمی به وب‌سایت وزارت صمت هدایت می‌شوند.</p>
+        </div>
+        <div class="pathways-grid">
+          <details class="pathway-card">
+            <summary><span class="pathway-number">۰۱</span><span class="pathway-title"><b>صنعت</b><small>تولید، صنایع و توسعه صنعتی</small></span><span class="pathway-chevron">⌄</span></summary>
+            <div class="pathway-links">
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">توسعه صنعتی و تولید ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">واحدهای صنعتی و تولیدی ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">حمایت از تولید ↗</a>
+            </div>
+          </details>
+          <details class="pathway-card">
+            <summary><span class="pathway-number">۰۲</span><span class="pathway-title"><b>معدن</b><small>اکتشاف، بهره‌برداری و صنایع معدنی</small></span><span class="pathway-chevron">⌄</span></summary>
+            <div class="pathway-links">
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">اکتشاف و بهره‌برداری ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">صنایع معدنی ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">مقررات و مجوزهای معدنی ↗</a>
+            </div>
+          </details>
+          <details class="pathway-card">
+            <summary><span class="pathway-number">۰۳</span><span class="pathway-title"><b>تجارت</b><small>بازرگانی داخلی و خارجی</small></span><span class="pathway-chevron">⌄</span></summary>
+            <div class="pathway-links">
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">تجارت داخلی و خارجی ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">صادرات و واردات ↗</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">مقررات و رویه‌های تجاری ↗</a>
+            </div>
+          </details>
+          <details class="pathway-card">
+            <summary><span class="pathway-number">۰۴</span><span class="pathway-title"><b>متفرقه</b><small>اطلاعیه‌ها، خدمات و راهنماها</small></span><span class="pathway-chevron">⌄</span></summary>
+            <div class="pathway-links">
+              <a href="#news">اخبار و اطلاعیه‌ها</a>
+              <a href="#contact">ارتباط و ارسال درخواست</a>
+              <a href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">درگاه رسمی وزارت صمت ↗</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
 
     <section class="quick-menu container" id="services" aria-label="دسته‌بندی خدمات">
       <div class="quick-heading">
@@ -240,7 +152,6 @@
           <div class="director-meta"><span class="avatar">م</span><div><strong>مدیرعامل مجموعه دلگشا</strong><small>پیام خوش‌آمدگویی و معرفی خدمات</small></div></div>
         </div>
         <div class="video-frame">
-          <!-- برای افزودن ویدیو: src فایل ویدیویی خود را در تگ video قرار دهید یا آن را با iframe سرویس ویدیویی جایگزین کنید. -->
           <video controls poster="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85" preload="metadata">
             <source src="" type="video/mp4">
             مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
