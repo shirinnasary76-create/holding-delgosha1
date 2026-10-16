@@ -53,8 +53,8 @@
 <style>
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
   margin: 30px auto;
   direction: rtl;
 }
@@ -65,21 +65,19 @@
 
 .hero-dropdown button {
   width: 100%;
-  padding: 20px 15px;
+  padding: 20px 8px;
   border: 1px solid #c6a76a;
   border-radius: 14px;
   background: linear-gradient(135deg, #153653, #09243c);
-  color: #fff;
-  font-size: 19px;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  transition: .3s;
 }
 
 .hero-dropdown button:hover {
   background: #c6a76a;
   color: #102b43;
-  transform: translateY(-3px);
 }
 
 .hero-dropdown .dropdown-menu {
@@ -88,8 +86,8 @@
   top: calc(100% + 8px);
   right: 0;
   width: 100%;
-  min-width: 180px;
-  background: #fff;
+  min-width: 150px;
+  background: white;
   border: 1px solid #e5d5b2;
   border-radius: 12px;
   box-shadow: 0 10px 25px #0002;
@@ -103,12 +101,11 @@
 
 .dropdown-menu a {
   display: block;
-  padding: 13px 16px;
+  padding: 12px;
   color: #153653;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13px;
   border-bottom: 1px solid #eee;
-  transition: .2s;
 }
 
 .dropdown-menu a:hover {
@@ -118,21 +115,7 @@
 
 @media (max-width: 600px) {
   .hero-stats {
-    gap: 8px;
-  }
-
-  .hero-dropdown button {
-    padding: 15px 5px;
-    font-size: 15px;
-  }
-
-  .hero-dropdown .dropdown-menu {
-    min-width: 130px;
-  }
-
-  .dropdown-menu a {
-    padding: 11px 8px;
-    font-size: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 </style>
@@ -140,9 +123,7 @@
 <div class="hero-stats container">
 
   <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">
-      معدن⌄
-    </button>
+    <button type="button" aria-expanded="false">معدن ⌄</button>
     <div class="dropdown-menu">
       <a href="#mining-services">خدمات معدنی</a>
       <a href="#mining-guides">راهنمای معدن</a>
@@ -151,9 +132,7 @@
   </div>
 
   <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">
-      صنعت⌄
-    </button>
+    <button type="button" aria-expanded="false">صنعت ⌄</button>
     <div class="dropdown-menu">
       <a href="#industrial-services">خدمات صنعتی</a>
       <a href="#industrial-guides">راهنمای صنعت</a>
@@ -162,13 +141,20 @@
   </div>
 
   <div class="hero-dropdown">
-    <button type="button" aria-expanded="false">
-      تجارت⌄
-    </button>
+    <button type="button" aria-expanded="false">تجارت ⌄</button>
     <div class="dropdown-menu">
       <a href="#trade-services">خدمات تجاری</a>
       <a href="#trade-guides">راهنمای تجارت</a>
       <a href="#contact">ارتباط با مجموعه</a>
+    </div>
+  </div>
+
+  <div class="hero-dropdown">
+    <button type="button" aria-expanded="false">متفرقه ⌄</button>
+    <div class="dropdown-menu">
+      <a href="#announcements">اطلاعیه‌ها</a>
+      <a href="#downloads">دانلود فایل‌ها</a>
+      <a href="#faq">سؤالات متداول</a>
     </div>
   </div>
 
