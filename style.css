@@ -12,3 +12,24 @@
 @media(max-width:1000px){.main-nav{gap:15px;font-size:12px}.nav-wrap{gap:15px}.hero{min-height:550px}.director-layout{gap:30px}.contact-layout{gap:35px}.detail-layout{gap:35px}}
 @media(max-width:760px){.container{width:min(100% - 30px,560px)}.top-links{gap:10px}.top-links a:nth-child(1){display:none}.nav-wrap{min-height:72px}.mobile-toggle{display:block}.main-nav{display:none;position:absolute;top:72px;right:0;left:0;background:#101d31;padding:10px 22px 20px;flex-direction:column;align-items:stretch;gap:0;border-top:1px solid #ffffff20}.main-nav.open{display:flex}.main-nav>a:not(.nav-cta){padding:12px 0;border-bottom:1px solid #ffffff12}.main-nav>a:not(.nav-cta):after{display:none}.nav-cta{text-align:center;margin-top:12px}.brand-text strong{font-size:20px}.hero{min-height:620px;background-position:60% center}.hero-overlay{background:linear-gradient(90deg,#07111fe8,#0b1a2ac9 70%,#0b1a2a90)}.hero-content{padding-top:50px;padding-bottom:145px}.hero h1{font-size:42px}.hero-content>p{font-size:14px}.hero-stats{grid-template-columns:1fr;bottom:0}.hero-stats div{padding:8px 15px;border-left:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;justify-content:space-between;gap:10px}.hero-stats div:last-child{border-bottom:0}.hero-stats strong{font-size:12px}.hero-stats span{font-size:10px}.quick-menu{padding:52px 0}.quick-heading,.section-head{align-items:flex-start;flex-direction:column;gap:10px}.quick-heading h2,.section-head h2,.detail-layout h2{font-size:25px}.dropdown-grid,.news-grid,.benefit-grid{grid-template-columns:1fr}.dropdown-card summary{padding:15px}.director-section,.section,.benefits-section,.contact-section{padding:52px 0}.director-layout,.detail-layout,.contact-layout{grid-template-columns:1fr;gap:30px}.director-copy h2,.contact-copy h2{font-size:26px}.video-frame{height:250px}.news-image{height:210px}.benefit-grid{gap:38px;margin-top:55px}.benefit{padding:24px}.detail-layout{gap:20px}.contact-form{padding:22px 18px}.footer-main{padding:25px 0;flex-wrap:wrap;justify-content:space-between}.footer-main>p{order:3;width:100%;margin:0}.footer-bottom .container{gap:8px;flex-direction:column}.top-inner{gap:8px;font-size:10px}.top-links{gap:10px}.top-links span{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* پیوند به منبع رسمی */
+.official-source{background:#fff;padding:42px 0;border-top:1px solid var(--line)}
+.official-source-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.official-source h2{font-size:22px;margin:6px 0}
+.official-source p{font-size:12px;color:var(--muted);margin:0}
+@media(max-width:760px){.official-source-inner{align-items:flex-start;flex-direction:column}.official-source h2{font-size:20px}}
+
+/* افزوده‌های بخش معرفی فارسی وزارت صمت */
+.ministry-section { background: #f7f9fc; }
+.ministry-intro { max-width: 980px; color: #596579; font-size: 1.02rem; line-height: 2.1; margin: 0 0 28px; }
+.ministry-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.ministry-card { background: #fff; border: 1px solid #e5eaf1; border-radius: 16px; padding: 24px 22px; box-shadow: 0 8px 26px rgba(16,35,67,.04); }
+.ministry-number { display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #fff0e5; color: #df6c16; font-weight: 800; margin-bottom: 14px; }
+.ministry-card h3 { margin: 0 0 10px; color: #12294b; font-size: 1.08rem; }
+.ministry-card p { color: #667085; line-height: 1.95; font-size: .92rem; margin: 0 0 18px; }
+.ministry-card a { color: #d96612; font-weight: 700; font-size: .88rem; text-decoration: none; }
+.official-notice { margin-top: 22px; padding: 16px 20px; border-right: 4px solid #e97820; background: #fff; color: #586477; border-radius: 10px; line-height: 1.9; }
+.official-notice strong { color: #142b4c; }
+@media (max-width: 1000px) { .ministry-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .ministry-grid { grid-template-columns: 1fr; } .ministry-card { padding: 20px; } }
