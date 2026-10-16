@@ -49,13 +49,165 @@
           <a class="btn btn-glass" href="https://www.mimt.gov.ir/" target="_blank" rel="noopener">وب‌سایت رسمی وزارت صمت ↗</a>
         </div>
         <div class="hero-note"><span class="note-dot"></span> برای مشاهده آخرین خبرها، اطلاعیه‌ها و خدمات رسمی، از درگاه وزارت صمت بازدید کنید.</div>
-      </div>
-      <div class="hero-stats container">
-        <div><strong>خدمات</strong><span>راهنما و دسترسی سریع</span></div>
-        <div><strong>اطلاع‌رسانی</strong><span>خبرها و اطلاعیه‌های تازه</span></div>
-        <div><strong>پاسخ‌گویی</strong><span>راه‌های ارتباط با مجموعه</span></div>
-      </div>
-    </section>
+     
+<style>
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 30px auto;
+  direction: rtl;
+}
+
+.hero-dropdown {
+  position: relative;
+}
+
+.hero-dropdown button {
+  width: 100%;
+  padding: 20px 15px;
+  border: 1px solid #c6a76a;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #153653, #09243c);
+  color: #fff;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.hero-dropdown button:hover {
+  background: #c6a76a;
+  color: #102b43;
+  transform: translateY(-3px);
+}
+
+.hero-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 100%;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e5d5b2;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px #0002;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+.hero-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 13px 16px;
+  color: #153653;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  transition: .2s;
+}
+
+.dropdown-menu a:hover {
+  background: #f5efe2;
+  color: #987638;
+}
+
+@media (max-width: 600px) {
+  .hero-stats {
+    gap: 8px;
+  }
+
+  .hero-dropdown button {
+    padding: 15px 5px;
+    font-size: 15px;
+  }
+
+  .hero-dropdown .dropdown-menu {
+    min-width: 130px;
+  }
+
+  .dropdown-menu a {
+    padding: 11px 8px;
+    font-size: 12px;
+  }
+}
+</style>
+
+<div class="hero-stats container">
+
+  <div class="hero-dropdown">
+    <button type="button" aria-expanded="false">
+      معدن⌄
+    </button>
+    <div class="dropdown-menu">
+      <a href="#mining-services">خدمات معدنی</a>
+      <a href="#mining-guides">راهنمای معدن</a>
+      <a href="#mining-news">اخبار و اطلاعیه‌ها</a>
+    </div>
+  </div>
+
+  <div class="hero-dropdown">
+    <button type="button" aria-expanded="false">
+      صنعت⌄
+    </button>
+    <div class="dropdown-menu">
+      <a href="#industrial-services">خدمات صنعتی</a>
+      <a href="#industrial-guides">راهنمای صنعت</a>
+      <a href="#industrial-news">اخبار و اطلاعیه‌ها</a>
+    </div>
+  </div>
+
+  <div class="hero-dropdown">
+    <button type="button" aria-expanded="false">
+      تجارت⌄
+    </button>
+    <div class="dropdown-menu">
+      <a href="#trade-services">خدمات تجاری</a>
+      <a href="#trade-guides">راهنمای تجارت</a>
+      <a href="#contact">ارتباط با مجموعه</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  const sections = document.querySelectorAll(
+    '.hero-stats .hero-dropdown'
+  );
+
+  sections.forEach(function (section) {
+    const button = section.querySelector('button');
+
+    button.addEventListener('click', function (event) {
+      event.stopPropagation();
+
+      sections.forEach(function (other) {
+        if (other !== section) {
+          other.classList.remove('open');
+          other.querySelector('button')
+            .setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      const isOpen = section.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+    });
+  });
+
+  document.addEventListener('click', function () {
+    sections.forEach(function (section) {
+      section.classList.remove('open');
+      section.querySelector('button')
+        .setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
 
     <section class="quick-menu container" id="services" aria-label="دسته‌بندی خدمات">
       <div class="quick-heading">
